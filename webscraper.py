@@ -31,7 +31,8 @@ def getProblemInfo(url):
             if "Time limit:" in constraint.text:
                 time_limit = constraint.text.replace("Time limit:", "").strip()
             elif "Memory limit:" in constraint.text:
-                memory_limit = constraint.text.replace("Memory limit:", "").strip()
+                memory_limit = constraint.text.replace(
+                    "Memory limit:", "").strip()
 
         # Extract input and output sections
         input_header = soup.find("h1", id="input")
@@ -44,14 +45,17 @@ def getProblemInfo(url):
 
         # Extract constraints
         constraints_header = soup.find("h1", id="constraints")
+
         if constraints_header:
-            constraints = constraints_header.find_next("ul").text
+            constraints = constraints_header.find_next("ul")
+            constraints = constraints.text if constraints is not None else ""
 
         # Extract example input and output
         example_header = soup.find("h1", id="example")
         if example_header:
             example_input = example_header.find_next("pre").text.strip()
-            example_output = example_header.find_next("pre").find_next("pre").text.strip()
+            example_output = example_header.find_next(
+                "pre").find_next("pre").text.strip()
 
         # Print or store the results
         problemInfo = {
@@ -71,6 +75,7 @@ def getProblemInfo(url):
     else:
         print(f"Failed to fetch the page. Status code: {response.status_code}")
         return {}
+
 
 if __name__ == "__main__":
     getProblemInfo(sys.argv[1])

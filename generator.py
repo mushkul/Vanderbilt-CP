@@ -1,9 +1,12 @@
+import subprocess
 from webscraper import getProblemInfo
 import json
 import os
 
 if __name__ == '__main__':
     with open("problem_links.txt", 'r') as f:
+        os.makedirs("problemset", exist_ok=True)
+
         for line in f.readlines():
             line = line.rstrip()
             number = line.split('/')[-1]
