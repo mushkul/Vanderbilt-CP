@@ -5,6 +5,7 @@
 ```bash
 python -m venv ./venv/
 source venv activate
+pip install -r requirements.txt
 ```
 
 ### Generate problems in json format
