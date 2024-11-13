@@ -16,7 +16,7 @@ def getProblemInfo(url):
         description_block = soup.find(class_="md")
         category = soup.find(class_="nav sidebar").find("h4").text
         title = title_block.find("h1").text
-        description = description_block.find("p").text
+        description_list = description_block.find_all("p")
         time_limit = ""
         memory_limit = ""
         input_specification = ""
@@ -42,6 +42,15 @@ def getProblemInfo(url):
         output_header = soup.find("h1", id="output")
         if output_header:
             output_specification = output_header.find_next_sibling("p").text
+
+        statement_paragraphs = []
+        for element in description_block.children:
+            if element == input_header:
+                break
+            statement_paragraphs.append(element)
+
+        description = " ".join(
+            paragraph.text for paragraph in statement_paragraphs)
 
         # Extract constraints
         constraints_header = soup.find("h1", id="constraints")
@@ -78,4 +87,4 @@ def getProblemInfo(url):
 
 
 if __name__ == "__main__":
-    getProblemInfo(sys.argv[1])
+    print(getProblemInfo(sys.argv[1]))
