@@ -47,7 +47,8 @@ def getProblemInfo(url):
         for element in description_block.children:
             if element == input_header:
                 break
-            statement_paragraphs.append(element)
+            if element.name == "p":
+                statement_paragraphs.append(element)
 
         description = " ".join(
             paragraph.text for paragraph in statement_paragraphs)
