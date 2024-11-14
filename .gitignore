@@ -2,3 +2,4 @@ __pycache__/
 problemset/
 venv/
 problem_links.txt
+node_modules
