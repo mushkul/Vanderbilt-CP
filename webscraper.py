@@ -3,6 +3,23 @@ from bs4 import BeautifulSoup
 import sys
 
 
+def getParagraphs(description_block, start_element, end_element):
+    include = False
+    paragraphs = []
+
+    for element in description_block.children:
+        if element == end_element:
+            break
+        if element == start_element:
+            include = True
+        if include and hasattr(element, 'text') and element.name not in ["h1", "h2", "h3", "h4", "h5", "h6"]:
+            paragraphs.append(element)
+
+    description = " ".join(paragraph.text for paragraph in paragraphs)
+
+    return description
+
+
 def getProblemInfo(url):
     response = requests.get(url)
 
@@ -36,12 +53,18 @@ def getProblemInfo(url):
 
         # Extract input and output sections
         input_header = soup.find("h1", id="input")
-        if input_header:
-            input_specification = input_header.find_next_sibling("p").text
-
         output_header = soup.find("h1", id="output")
+        constraints_header = soup.find("h1", id="constraints")
+
+        if input_header:
+            input_specification = getParagraphs(
+                description_block, input_header, output_header)
+            # input_header.find_next_sibling("p").text
+
         if output_header:
-            output_specification = output_header.find_next_sibling("p").text
+            output_specification = getParagraphs(
+                description_block, output_header, constraints_header)
+            # output_header.find_next_sibling("p").text
 
         statement_paragraphs = []
         for element in description_block.children:
@@ -50,11 +73,10 @@ def getProblemInfo(url):
             if element.name == "p":
                 statement_paragraphs.append(element)
 
-        description = " ".join(
-            paragraph.text for paragraph in statement_paragraphs)
+        description = getParagraphs(
+            description_block, soup.find("p"), input_header)
 
         # Extract constraints
-        constraints_header = soup.find("h1", id="constraints")
 
         if constraints_header:
             constraints = constraints_header.find_next("ul")
