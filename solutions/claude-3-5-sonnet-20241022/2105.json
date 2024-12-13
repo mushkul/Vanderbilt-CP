@@ -1,0 +1,47 @@
+{
+  "result": "RUNTIME ERROR",
+  "tests": [
+    {
+      "index": "",
+      "verdict": "RUNTIME ERROR",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "RUNTIME ERROR",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "ACCEPTED",
+      "time": "",
+      "verdictColor": "green"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "result": "WRONG ANSWER",
+  "tests": [
+    {
+      "index": "",
+      "verdict": "ACCEPTED",
+      "time": "",
+      "verdictColor": "green"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "TIME LIMIT EXCEEDED",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "TIME LIMIT EXCEEDED",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "TIME LIMIT EXCEEDED",
+      "time": "",
+      "verdictColor": "red"
+    }
+  ]
+}

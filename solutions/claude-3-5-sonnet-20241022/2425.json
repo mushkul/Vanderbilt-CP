@@ -1,0 +1,35 @@
+{
+  "result": "TIME LIMIT EXCEEDED",
+  "tests": [
+    {
+      "index": "",
+      "verdict": "TIME LIMIT EXCEEDED",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "TIME LIMIT EXCEEDED",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "TIME LIMIT EXCEEDED",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "WRONG ANSWER",
+      "time": "",
+      "verdictColor": "red"
+    },
+    {
+      "index": "",
+      "verdict": "TIME LIMIT EXCEEDED",
+      "time": "",
+      "verdictColor": "red"
+    }
+  ]
+}
